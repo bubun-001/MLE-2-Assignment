@@ -41,9 +41,9 @@ OPENAI_API_KEY="sk-..." python src/run_assessment.py --llm
 
 ## Result Output
 
-===========================================================
-  COMPLIANCE CHECK RESULTS
-============================================================
+
+ ## Compliance check Results:
+
 
 
 
@@ -64,9 +64,9 @@ conv_007: ✗ NON-COMPLIANT (score: 42)
   [MEDIUM] R006 (fair_engagement): matched '(absence of acknowledgment)'
 ```
 
-============================================================
-  CUSTOMER SITUATION CLASSIFICATION
-============================================================
+
+  ## Compliance check Results:
+
 conv_007: other (confidence: medium)
     Note: No product loss or substandard service signals. Likely ability-to-pay or general    
     
