@@ -1,0 +1,4 @@
+# Reference implementation uses only Python stdlib (json, pathlib).
+# Add any dependencies you need for your solution below, e.g.:
+# openai>=1.0.0
+# anthropic>=0.18.0

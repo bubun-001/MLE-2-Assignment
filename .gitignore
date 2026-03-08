@@ -1,0 +1,17 @@
+# Evaluator-only; do not share with candidates
+RUBRIC.md
+
+# Environment and IDE
+.venv/
+venv/
+.env
+.env.local
+*.pyc
+__pycache__/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Generated output
+output/

@@ -1,0 +1,87 @@
+{
+    "_comment": "Ground truth labels for evaluating the compliance checker and situation classifier. Hand-labeled by reviewing each conversation in data/conversations.json.",
+    "compliance": {
+        "conv_001": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Agent is professional, acknowledges frustration, offers escalation."
+        },
+        "conv_002": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Agent is empathetic, offers a payment plan. Textbook compliant conversation."
+        },
+        "conv_003": {
+            "is_compliant": false,
+            "expected_violations": [
+                "R003",
+                "R004",
+                "R005"
+            ],
+            "notes": "Agent uses 'that's not our problem' (R003), demands payment by deadline (R004), says 'your credit will be ruined' (R005). Also fails to acknowledge customer's illness (R006 not included since R003 already covers the hostile response)."
+        },
+        "conv_004": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Agent apologizes, applies credit, and follows up. Excellent handling."
+        },
+        "conv_005": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Agent acknowledges the issue, waives late fees, offers to connect with orders team."
+        },
+        "conv_006": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Simple, polite interaction. No issues."
+        },
+        "conv_007": {
+            "is_compliant": false,
+            "expected_violations": [
+                "R001",
+                "R002",
+                "R006"
+            ],
+            "notes": "Agent threatens to sue and garnish wages (R001), says 'your family will find out' (R002), fails to acknowledge customer hardship (R006). Note: R004 could apply ('pay immediately') but the words are separated by '$2,100' making keyword detection impractical — this is a known gap the LLM layer would catch."
+        },
+        "conv_008": {
+            "is_compliant": true,
+            "expected_violations": [],
+            "notes": "Agent apologizes for bad experience, offers credit and payment plan."
+        }
+    },
+    "situation": {
+        "conv_001": {
+            "classification": "product_loss",
+            "notes": "Customer was charged after cancellation and never got the service they paid for."
+        },
+        "conv_002": {
+            "classification": "other",
+            "notes": "Customer lost their job — ability-to-pay issue, not a product/service complaint."
+        },
+        "conv_003": {
+            "classification": "other",
+            "notes": "Customer is sick and can't work — hardship/ability-to-pay, no product complaint."
+        },
+        "conv_004": {
+            "classification": "substandard_service",
+            "notes": "Premium features never worked — substandard service delivery."
+        },
+        "conv_005": {
+            "classification": "product_loss",
+            "notes": "Product never arrived but customer was charged — clear product loss."
+        },
+        "conv_006": {
+            "classification": "other",
+            "notes": "Customer will pay next week — simple ability-to-pay, no complaints."
+        },
+        "conv_007": {
+            "classification": "other",
+            "notes": "Customer going through divorce and job loss — hardship, no product/service issue."
+        },
+        "conv_008": {
+            "classification": "substandard_service",
+            "notes": "Service was slow and kept dropping — substandard service quality."
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CustomerSituation",
+  "description": "Optional output contract for customer situation classifier. Candidates may implement this or mock it.",
+  "type": "object",
+  "properties": {
+    "conversation_id": { "type": "string" },
+    "has_product_loss": { "type": "boolean", "description": "Customer experienced actual product/service loss (e.g. never received product, charged for cancelled service)" },
+    "has_substandard_service": { "type": "boolean", "description": "Customer reports substandard service (e.g. features not working, slow service)" },
+    "situation_other": { "type": "boolean", "description": "Other (e.g. ability-to-pay only, dispute, hardship)" },
+    "notes": { "type": "string", "description": "Optional free-text or codes" }
+  }
+}

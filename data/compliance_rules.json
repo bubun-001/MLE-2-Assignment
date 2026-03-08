@@ -1,0 +1,55 @@
+{
+  "rule_set_id": "collections_v1",
+  "version": "2024.1",
+  "description": "Collections compliance rules — consumer finance. Align with FDCPA and internal policy.",
+  "rules": [
+    {
+      "id": "R001",
+      "category": "forbidden_language",
+      "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+      "severity": "critical",
+      "keywords": ["sue", "suing", "garnish", "wages", "legal action", "lawyer", "arrest", "prison"],
+      "regex_hint": null
+    },
+    {
+      "id": "R002",
+      "category": "forbidden_language",
+      "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
+      "severity": "critical",
+      "keywords": ["family will find out", "tell your employer", "contact your boss", "call your family"],
+      "regex_hint": null
+    },
+    {
+      "id": "R003",
+      "category": "pressure_tactics",
+      "description": "Agent must not use abusive or demeaning language.",
+      "severity": "high",
+      "keywords": ["that's not our problem", "not my problem", "your fault", "you have to"],
+      "regex_hint": null
+    },
+    {
+      "id": "R004",
+      "category": "pressure_tactics",
+      "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+      "severity": "medium",
+      "keywords": ["pay immediately", "pay right now", "need payment in full by"],
+      "regex_hint": null
+    },
+    {
+      "id": "R005",
+      "category": "misrepresentation",
+      "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+      "severity": "high",
+      "keywords": ["credit will be ruined", "destroy your credit", "never get a loan again"],
+      "regex_hint": null
+    },
+    {
+      "id": "R006",
+      "category": "fair_engagement",
+      "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+      "severity": "medium",
+      "keywords": ["I understand", "I'm sorry to hear", "I'll look into", "escalate", "waive"],
+      "regex_hint": null
+    }
+  ]
+}

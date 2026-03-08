@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Conversation",
+  "description": "A single conversation between agent and customer. Mock API returns this shape.",
+  "type": "object",
+  "required": ["conversation_id", "messages"],
+  "properties": {
+    "conversation_id": { "type": "string", "description": "Unique conversation identifier" },
+    "channel": { "type": "string", "enum": ["phone", "chat", "email"], "description": "Channel of communication" },
+    "customer_segment": { "type": "string", "description": "e.g. delinquent_30, delinquent_60, delinquent_90" },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "text", "timestamp"],
+        "properties": {
+          "role": { "type": "string", "enum": ["agent", "customer"] },
+          "text": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}
