@@ -45,16 +45,24 @@ OPENAI_API_KEY="sk-..." python src/run_assessment.py --llm
   COMPLIANCE CHECK RESULTS
 ============================================================
 
- conv_007: ✗ NON-COMPLIANT (score: 42)
-    [CRITICAL] R001 (forbidden_language): matched 'sue'
-      └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
-    [CRITICAL] R001 (forbidden_language): matched 'garnish'
-      └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
-    [CRITICAL] R001 (forbidden_language): matched 'wages'
-      └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
-    [CRITICAL] R002 (forbidden_language): matched 'family will find out'
-      └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
-    [MEDIUM] R006 (fair_engagement): matched '(absence of acknowledgment)'
+
+
+```text
+conv_007: ✗ NON-COMPLIANT (score: 42)
+  [CRITICAL] R001 (forbidden_language): matched 'sue'
+    └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
+
+  [CRITICAL] R001 (forbidden_language): matched 'garnish'
+    └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
+
+  [CRITICAL] R001 (forbidden_language): matched 'wages'
+    └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
+
+  [CRITICAL] R002 (forbidden_language): matched 'family will find out'
+    └─ message[0]: "You need to pay your balance of $2,100 immediately. We're going to sue you and garnish your wages if you don't. Your fam..."
+
+  [MEDIUM] R006 (fair_engagement): matched '(absence of acknowledgment)'
+```
 
 ============================================================
   CUSTOMER SITUATION CLASSIFICATION
