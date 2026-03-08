@@ -45,8 +45,6 @@ OPENAI_API_KEY="sk-..." python src/run_assessment.py --llm
  ## Compliance check Results:
 
 
-
-
 ```text
 conv_007: ✗ NON-COMPLIANT (score: 42)
   [CRITICAL] R001 (forbidden_language): matched 'sue'
@@ -65,7 +63,7 @@ conv_007: ✗ NON-COMPLIANT (score: 42)
 ```
 
 
-  ## Compliance check Results:
+  ## Customer Situation Classification:
 
 conv_007: other (confidence: medium)
     Note: No product loss or substandard service signals. Likely ability-to-pay or general    
